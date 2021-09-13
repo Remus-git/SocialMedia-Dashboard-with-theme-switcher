@@ -1,0 +1,476 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.mainContainer{
+    width: 100%;
+    height: clamp(100vh,2vh,200vh   );
+}
+.mainContainerActive{
+    background-color: hsl(230, 17%, 14%);
+}
+.firstSectionContainer{
+    width: 100%;
+    height: 50%;
+}
+.header{
+    width: 100%;
+    height: 60%;
+    background-color: hsl(225, 100%, 98%);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+}
+.headerActive{
+    background-color: hsl(232, 19%, 15%);
+}
+.toggleContainer{
+    display: flex;
+    height: 20%;
+    align-items: center;
+    position: relative;
+}
+.toggle{
+    width: 40px;
+    height: 20px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+#mytoggle{
+    display: none;
+}
+.slider{
+    width: 40px;
+    height: 20px;
+    background-color:  hsl(230, 22%, 74%);
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+}
+#mytoggle:checked ~ .slider{
+    background-image: linear-gradient(to right, hsl(210, 78%, 56%) ,hsl(146, 68%, 55%));
+}
+.slider::after{
+    content: " ";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    margin: 2px;
+    right: 0;
+}
+#mytoggle:checked ~ .slider::after{
+    background-color: hsl(230, 17%, 14%);
+    left: 0;
+    transform: translateX(0px);
+}
+.firstTitle{
+    display: flex;
+    flex-direction: column;
+}
+.firstHeadline{
+    font-size: 2rem;
+    color: hsl(230, 17%, 14%);
+    font-weight: 600;
+    font-weight: bolder;
+}
+.firstHeadlineActive{
+    color: white;
+}
+.firstDis{
+    font-size: 14px;
+    color: hsl(228, 12%, 44%);
+    font-weight: 600;
+}
+.toggleContainer span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: hsl(228, 12%, 44%);
+    padding-right: 10px;
+}
+.subContainer{
+    width: 100%;
+    height: 30%;
+    top: 130px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2.8rem;
+    position: absolute;
+
+}
+.cardContainer{
+    width: 100%;
+    height: 98%;
+    background-color: hsl(227, 47%, 96%);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cardContainerActive{
+    background-color: hsl(228, 28%, 20%);
+}
+.facebook{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(208, 92%, 53%);
+    border-radius: 8px;
+}
+.cardContainer:hover{
+    background-color: hsl(227, 47%, 93%);
+}
+.fbTitle{
+    display: flex;
+}
+.fbTitle span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+.fbTitleActive{
+    color: hsl(228, 34%, 66%);
+}
+.fbDisHeader{
+    font-size: 5rem;
+    color: hsl(230, 17%, 14%);
+    font-weight: 600;
+    margin: 30px;
+}
+
+.fbDis{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.fbFollow{
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 44%);
+    opacity: 0.7;
+    font-weight:600;
+}
+.fbProgress span{
+    color:hsl(163, 72%, 41%);
+    font-size:12px;
+    font-weight:600;
+}
+.twitter{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(203, 89%, 53%);
+    border-radius: 8px;
+}
+
+.twitterTitle{
+    display: flex;
+}
+.twitterTitle span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+.ttDisHeader{
+    font-size: 5rem;
+    color: hsl(230, 17%, 14%);
+    font-weight: 600;
+    margin: 30px;
+}
+.twitterDis{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.ttFollow{
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 44%);
+    opacity: 0.7;
+    font-weight:600;
+}
+.ttProgress span{
+    color:hsl(163, 72%, 41%);
+    font-size:12px;
+    font-weight:600;
+}
+.instagram{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    border-radius: 8px;
+}
+.igTitle{
+    display: flex;
+}
+.igTitle span{
+    padding-left: 5px;
+    font-size: 14px;
+}
+.igDisHeader{
+    font-size:5rem;
+    color: hsl(230, 17%, 14%);
+    font-weight: 600;
+    margin: 30px;
+}
+.igDis{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.igFollow{
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 44%);
+    opacity: 0.7;
+    font-weight:600;
+}
+.igProgress span{
+    color:hsl(163, 72%, 41%);
+    font-size:12px;
+    font-weight:600;
+}
+.youtube{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(348, 97%, 39%);
+    border-radius: 8px;
+}
+.youtubeTitle{
+    display: flex;
+}
+.youtubeTitle span{
+    font-size: 14px;
+    padding-left: 5px;
+}
+.youtubeDis{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.ytDisHeader{
+    font-size: 5rem;
+    color: hsl(230, 17%, 14%);
+    font-weight: 600;
+    margin: 30px;
+}
+.ytFollow{
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 44%);
+    opacity: 0.7;
+    font-weight:600;
+}
+.ytProgress span{
+    color: hsl(356, 69%, 56%);;
+    font-size:12px;
+    font-weight:600;
+}
+/* FIRST SECTION COMPLETE */
+
+.secondSectionContainer{
+    width: 100%;
+    height: 50%;
+}
+.secondHeadline{
+    padding-left: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    color: hsl(228, 12%, 44%);
+}
+.secondSubContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    gap: 2rem;
+}
+.block{
+    border-radius: 8px;
+    height: 150px;
+    width: 100%;
+    background-color: hsl(227, 47%, 96%);
+}
+.secondDisHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+.secondDisProgress{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    align-items: center;
+}
+.secondDisProgress span{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.block{
+    cursor: pointer;
+}
+.block:hover{
+    background-color: hsl(227, 47%, 93%);
+}
+span1{
+    color: hsl(163, 72%, 41%);
+}
+span2{
+    color:hsl(356, 69%, 56%);
+}
+span3{
+    color: hsl(163, 72%, 41%);
+}
+span4{
+    color: hsl(163, 72%, 41%);
+}
+span5{
+    color: hsl(163, 72%, 41%);
+}
+span6{
+    color: hsl(163, 72%, 41%);
+}
+span7{
+    color: hsl(356, 69%, 56%);
+}
+span8{
+    color: hsl(356, 69%, 56%);
+}
+.DisHeaderActive{
+    color: white;
+}
+.secondHeadlineActive{
+    color:white;
+}
+.blockActive{
+    background-color: hsl(228, 28%, 20%);
+}
+.secondHeaderSpanActive{
+    color: hsl(228, 34%, 66%);
+}
+.secondDisProgressActive{
+    color: white;
+}
+.cardContainerActive:hover{
+    background-color: hsl(228, 28%, 30%);
+}
+.blockActive:hover{
+    background-color: hsl(228, 28%, 30%);
+}
+@media(max-width:1023px){
+    .mainContainer{
+        height: 180vh;
+        
+    }
+    .subContainer{
+        height: 60%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .firstSectionContainer{
+        height: 45%;
+    }
+    .secondSectionContainer{
+        height: 45%;
+    }
+    .secondSubContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .fbDisHeader, .ttDisHeader, .igDisHeader, .ytDisHeader{
+        font-size: 3.5rem;
+    } 
+    .fbFollow, .ytFollow, .ttFollow, .igFollow{
+        font-size: .8rem;
+        letter-spacing: 2px;
+    }
+}
+@media(max-width:675px){
+    .mainContainer{
+        height: 300vh;
+    }
+    .firstSectionContainer{
+        height: 40%;
+    }
+    .firstTitle{
+        display: block;
+        height: 0;
+    }
+    .header{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .firstHeadline{
+        width: 100%;
+        font-size: 2rem;
+    }
+    .subContainer{
+        height: 100%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .secondSectionContainer{
+        height: 60%;
+    }
+    .secondSubContainer{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .fbDisHeader, .ttDisHeader, .igDisHeader, .ytDisHeader{
+        font-size: 2rem;
+    } 
+    .secondDisProgress span{
+        font-size: 2rem;
+    }
+}
+@media(max-width:495px){
+    .subContainer{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .secondSubContainer{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .firstHeadline{
+        font-size: 1rem;
+    }
+    .secondHeadline{
+        font-size: 1rem;
+    }
+}
+@media(max-height:820px){
+    .mainContainer{
+        height: 450vh;
+    }
+    .header{
+        height: 15%;
+    }
+    .firstSectionContainer{
+        height:40%
+    }
+    .subContainer{
+        height: 140%;
+    }
+    .secondSectionContainer{
+        height: 50%;
+    }
+}
